@@ -17,10 +17,19 @@ public class Square extends Rectangle {
         return getLength();
     }
 
-    //instead of setWidth and setLength maybe it is better to have setSide?
     public void setSide(double side) {
         super.setLength(side);
         super.setWidth(side);
+    }
+
+    @Override
+    public void setWidth(double width) {
+        setSide(width);
+    }
+
+    @Override
+    public void setLength(double length) {
+        setSide(length);
     }
 
     @Override
